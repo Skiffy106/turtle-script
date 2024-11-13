@@ -15,7 +15,7 @@ COMPILER_DEBUG: bool = True
 RUN_CODE: bool = True
 
 if __name__ == '__main__':
-    with open("test.trtl", "r") as f:
+    with open("src/test.trtl", "r") as f:
         code: str = f.read()
     
     if LEXER_DEBUG:
@@ -78,5 +78,9 @@ if __name__ == '__main__':
         result = cfunc()
 
         et = time.time()
+
+        # Possible Idea for creating object files
+        # with open("out/output.o", "wb") as object_file:
+        #     target_machine.emit_object(llvm_ir_parsed, object_file.write)
 
         print(f'\n\nProgram returned: {result}\n=== Executed in {round((et - st) * 1000, 6)} ms. ===')

@@ -1,0 +1,6 @@
+import strings
+import stdio
+
+func main() -> int {
+    return print("Hello World");
+}
