@@ -1,0 +1,7 @@
+func add(a: int, b: int) -> int {
+    return b + a;
+}
+
+func main() -> int {
+    return add(1, 2);
+}
